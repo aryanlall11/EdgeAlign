@@ -8,6 +8,8 @@ class SeqGen():
     def __init__(self):
         self.seqgroup = []
         self.grpidx = 0
+        self.seq1_W = []
+        self.seq2_W = []
         pass
 
     def zipfian(self,s,N):
@@ -66,7 +68,6 @@ class SeqGen():
 
     def getSequences(self):        
         while len(self.seqgroup) == 0:
-
             # Generate sequences from JC69 (SNP) and Zifian model (InDel)
             self.seq1, self.seq2 = self.genSequences()
             # Longest common substring
@@ -85,9 +86,9 @@ class SeqGen():
                 self.seqgroup.append([seq1_F, seq2_F])
 
         # Final working sequence 1
-        seq1_W = self.seqgroup[self.grpidx][0]
+        self.seq1_W = self.seqgroup[self.grpidx][0]
         # Final working sequence 2
-        seq2_W = self.seqgroup[self.grpidx][1]
+        self.seq2_W = self.seqgroup[self.grpidx][1]
         self.grpidx += 1
 
         gennew = False
@@ -97,4 +98,20 @@ class SeqGen():
             self.grpidx = 0
 
         # Return : Working sequences, Longest common length, next should be new?
-        return seq1_W, seq2_W, self.lcslength, gennew
+        return self.seq1_W, self.seq2_W, self.lcslength, gennew
+    
+    def printSequences(self):
+        if(len(self.seq1_W) == 0 or len(self.seq2_W) == 0):
+            print("Please first generate the sequences!")
+        else:
+            seq1 = []
+            seq2 = []
+            for i in range(len(self.seq1_W)):
+                seq1.append(BP[self.seq1_W[i]])
+            for i in range(len(self.seq2_W)):
+                seq2.append(BP[self.seq2_W[i]])
+            seq1 = "".join(seq1)
+            seq2 = "".join(seq2)
+
+            print("SEQ1 : " +  seq1)
+            print("SEQ2 : " + seq2)
