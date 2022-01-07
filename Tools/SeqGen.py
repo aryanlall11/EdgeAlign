@@ -66,7 +66,7 @@ class SeqGen():
         i, j, k = SequenceMatcher(autojunk=False, a=seq1, b=seq2).find_longest_match(0, len(seq1), 0, len(seq2))
         return i,j,k
 
-    def getSequences(self):        
+    def getSequences(self, display=False):        
         while len(self.seqgroup) == 0:
             # Generate sequences from JC69 (SNP) and Zifian model (InDel)
             self.seq1, self.seq2 = self.genSequences()
@@ -96,6 +96,9 @@ class SeqGen():
             gennew = True
             self.seqgroup = []
             self.grpidx = 0
+
+        if display:
+            self.printSequences()
 
         # Return : Working sequences, Longest common length, next should be new?
         return self.seq1_W, self.seq2_W, self.lcslength, gennew

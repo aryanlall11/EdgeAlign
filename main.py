@@ -10,4 +10,15 @@ for _ in range(1):
     # print("SEQ2 : ", seq2)
     #print("Length : ", lcslength)
     align.reset(seq1, seq2)
-    a = align.renderSeq(displayImage=True)
+    #align.renderSeq(display=True)
+
+    done = False
+    rewards_arr = []
+
+    while(not done):
+        a = np.random.randint(0, n_actions)
+        next_state, reward, done = align.updateSeq(a)
+        rewards_arr.append(reward)
+    print("Total action :", len(rewards_arr))
+    print("Avg reward :", np.mean(rewards_arr))
+        
