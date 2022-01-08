@@ -91,8 +91,6 @@ class Alignment():
             done = False
 
         if not done:
-            next_state = self.renderSeq()
-            return next_state, reward, done
+            self.next_state = self.renderSeq()
         
-        return None, reward, done
-        
+        return self.next_state, reward, done
