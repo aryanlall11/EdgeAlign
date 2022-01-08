@@ -1,7 +1,6 @@
 import  numpy as np
 from PIL import Image
 from Param.params import *
-import time
 
 class Alignment():
     def __init__(self):
@@ -65,7 +64,8 @@ class Alignment():
             img = img.rotate(270, expand = 1)
             img.show(title="Rendered Image Sequence")
 
-        return a
+        return a.reshape(-1, n_pixels*(window+2), n_pixels*4, 3)
+        #return np.reshape(a, a.size)  # Resize to 1-dimensional vector
 
     def updateSeq(self, action):
         if action == 0:
@@ -76,11 +76,11 @@ class Alignment():
             self.x += 1
             self.y += 1
 
-        elif action == 1:              # Seq2 Insertion
+        elif action == 1:            # Seq2 Insertion
             reward = rewards[2]
             self.y += 1
 
-        elif action == 2:              # Seq2 Deletion
+        elif action == 2:            # Seq2 Deletion
             reward = rewards[2]
             self.x += 1
 
