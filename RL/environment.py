@@ -1,8 +1,8 @@
 from gym import Env
 from gym.spaces import Discrete, Box
 
-from Tools.SeqGen import *
-from Tools.alignment import *
+from EdgeAlign.Tools.SeqGen import *
+from EdgeAlign.Tools.alignment import *
 
 seqgen = SeqGen()
 align = Alignment()

@@ -1,5 +1,5 @@
 import numpy as np
-from Param.params import *
+from EdgeAlign.Param.params import *
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Conv2D, Input, Flatten
 from tensorflow.keras import Input

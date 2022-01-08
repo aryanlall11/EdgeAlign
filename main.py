@@ -3,10 +3,10 @@
 # !pip install keras-rl2
 
 import numpy as np
-from Param.params import *
-from RL.agent import EdgeAlignAgent
-from RL.environment import EdgeAlignEnv
-from Tools.model import Model
+from EdgeAlign.Param.params import *
+from EdgeAlign.RL.agent import EdgeAlignAgent
+from EdgeAlign.RL.environment import EdgeAlignEnv
+from EdgeAlign.Tools.model import Model
 from tensorflow.keras.optimizers import Adam
 
 env = EdgeAlignEnv()
