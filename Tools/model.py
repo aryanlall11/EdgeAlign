@@ -1,7 +1,7 @@
 import numpy as np
 from EdgeAlign.Param.params import *
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Conv2D, Input, Flatten
+from tensorflow.keras.layers import Dense, Conv2D, Input, Flatten, Reshape
 from tensorflow.keras import Input
 
 class Model():
@@ -12,8 +12,8 @@ class Model():
         input_size = [n_pixels*(window+2), n_pixels*4, 3]
 
         model = Sequential()
-        model.add(Input(shape = input_size))
-        #model.add(Reshape(target_shape=[1, input_size[0], input_size[1], input_size[2]]))
+        model.add(Input(shape = (1, input_size[0], input_size[1], input_size[2])))
+        #model.add(Reshape(target_shape=[-1, input_size[0], input_size[1], input_size[2]]))
 
         # Conv blocks
         model.add(Conv2D(32, kernel_size=(9, 9), strides=(3, 3), activation="relu", padding="same"))
