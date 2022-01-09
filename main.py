@@ -7,7 +7,10 @@ from EdgeAlign.Param.params import *
 from EdgeAlign.RL.agent import EdgeAlignAgent
 from EdgeAlign.RL.environment import EdgeAlignEnv
 from EdgeAlign.Tools.model import Model
+from EdgeAlign.RL.evaluate import EdgeAlignEvaluate
+from EdgeAlign.Tools.SeqGen import *
 from tensorflow.keras.optimizers import Adam
+from tensorflow import keras
 
 env = EdgeAlignEnv()
 
@@ -21,37 +24,26 @@ model = model_obj.build_model()
 model.summary()
 
 agent_obj = EdgeAlignAgent()
-dqn_agent = agent_obj.build_agent(model=model)
+dqn_agent = agent_obj.build_agent(model=model, enable_dueling_network=True)
 dqn_agent.compile(Adam(lr = Learning_Rate), metrics = ['mae'])
+# Train RL agent
 dqn_agent.fit(env, nb_steps = Num_Episodes, visualize=False, verbose=1)
 
+model.save("/content/drive/MyDrive/DDP/EdgeAlignModel")  # Save model
+
+"""-------------------------------------------------------------------------"""
+
+# model = keras.models.load_model('path/to/location')
+
 # Evaluation
-scores = dqn_agent.test(env, nb_episodes=20, visualize=False)
+scores = dqn_agent.test(env, nb_episodes=10, visualize=False)
 print(np.mean(scores.history['episode_reward']))
 
-# seqgen = SeqGen()
-# align = Alignment()
-# model_obj = Model()
+# Generate random DNA test sequences
+seqgen = SeqGen()
+seq1, seq2 = seqgen.genSequences()
+seqgen.saveSequences(seq1=seq1, seq2=seq2, filename='sample.txt')
 
-# for _ in range(1):
-#     seq1, seq2, lcslength, new = seqgen.getSequences()
-#     # print("SEQ1 : ", seq1)
-#     # print("SEQ2 : ", seq2)
-#     #print("Length : ", lcslength)
-#     align.reset(seq1, seq2)
-#     #align.renderSeq(display=False)
-
-#     done = False
-#     rewards_arr = []
-
-#     while(not done):
-#         a = np.random.randint(0, n_actions)
-#         next_state, reward, done = align.updateSeq(a)
-#         rewards_arr.append(reward)
-#     print("Total action :", len(rewards_arr))
-#     print("Avg reward :", np.mean(rewards_arr))
-
-# model = model_obj.build_model()
-# model.summary()
-
-# #print(model.predict(k))
+eval = EdgeAlignEvaluate()
+eval.model = model
+eval.align(seq1=seq1, seq2=seq2, filename='alignment.txt')

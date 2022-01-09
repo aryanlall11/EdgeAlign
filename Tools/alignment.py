@@ -65,8 +65,8 @@ class Alignment():
             img.show(title="Rendered Image Sequence")
 
         #return a
-        return a.reshape(n_pixels*(window+2), n_pixels*4, 3)
-        #return np.reshape(a, a.size)  # Resize to 1-dimensional vector
+        #return a.reshape(n_pixels*(window+2), n_pixels*4, 3)
+        return np.reshape(a, a.size)  # Resize to 1-dimensional vector
 
     def updateSeq(self, action):
         if action == 0:

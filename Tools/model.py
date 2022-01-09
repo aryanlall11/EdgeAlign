@@ -12,8 +12,8 @@ class Model():
         input_size = [n_pixels*(window+2), n_pixels*4, 3]
 
         model = Sequential()
-        model.add(Input(shape = (1, input_size[0], input_size[1], input_size[2])))
-        #model.add(Reshape(target_shape=[-1, input_size[0], input_size[1], input_size[2]]))
+        model.add(Input(shape = (1, input_size[0]*input_size[1]*input_size[2])))
+        model.add(Reshape(target_shape=[-1, input_size[0], input_size[1], input_size[2]]))
 
         # Conv blocks
         model.add(Conv2D(32, kernel_size=(9, 9), strides=(3, 3), activation="relu", padding="same"))

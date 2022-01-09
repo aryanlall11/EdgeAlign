@@ -8,6 +8,8 @@ class SeqGen():
     def __init__(self):
         self.seqgroup = []
         self.grpidx = 0
+        self.seq1 = []
+        self.seq2 = []
         self.seq1_W = []
         self.seq2_W = []
         pass
@@ -59,6 +61,9 @@ class SeqGen():
         else:
             tempseq = np.random.randint(4, size=lseqs-len(seq2))
             seq2 = np.append(seq2, tempseq)
+
+        self.seq1 = seq1
+        self.seq2 = seq2
 
         return seq1, seq2
 
@@ -118,3 +123,21 @@ class SeqGen():
 
             print("SEQ1 : " +  seq1)
             print("SEQ2 : " + seq2)
+
+    def saveSequences(self, filename='sample.txt', seq1 = [], seq2 = []):
+        if(len(seq1) == 0 or len(seq2) == 0):
+            seq1 = self.seq1
+            seq2 = self.seq2
+        if(len(seq1) == 0 or len(seq2) == 0):
+            print("Please first generate the sequences or pass them!")
+        else:
+            seq1_s = []
+            seq2_s = []
+            with open(filename, 'w') as f:
+                for i in range(len(seq1)):
+                    seq1_s.append(BP[seq1[i]])
+                for i in range(len(seq2)):
+                    seq2_s.append(BP[seq2[i]])
+                seq1_s = "".join(seq1_s)
+                seq2_s = "".join(seq2_s)
+                f.write('>test1\n' + seq1_s + '\n>test2\n' + seq2_s)

@@ -1,0 +1,3 @@
+test1      --CC--- 2
+test2      AGCCCGT 7
+             **   
