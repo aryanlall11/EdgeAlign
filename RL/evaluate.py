@@ -41,6 +41,7 @@ class EdgeAlignEvaluate():
 
         done = False
         while(not done):
+            state = np.reshape(state, (1, 1, state.size))
             a = np.argmax(self.model.predict(state))#np.random.randint(0, n_actions)
             state, reward, done = align.updateSeq(a)
 
@@ -82,9 +83,9 @@ class EdgeAlignEvaluate():
     def count(self, s):
         return sum(map(s.count, BP))
         
-    def align(self, seq1=None, seq2=None, filename='alignment.txt'):
+    def align(self, seq1=[], seq2=[], filename='alignment.txt'):
 
-        if seq1==None or seq2==None or (len(seq1)==0) or (len(seq2)==0):
+        if (len(seq1)==0) or (len(seq2)==0):
             print("Empty sequence identified! Please try again :)")
             return "","",""
         else:

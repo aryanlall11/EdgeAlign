@@ -81,13 +81,17 @@ class SeqGen():
             
             # Reverse sequences
             if(s1 > 0 and s2 > 0):
-                seq1_R = np.append(self.seq1[s1 - 1::-1], [0])
-                seq2_R = np.append(self.seq2[s2 - 1::-1], [0])
+                # seq1_R = np.append(self.seq1[s1 - 1::-1], [0])
+                # seq2_R = np.append(self.seq2[s2 - 1::-1], [0])
+                seq1_R = self.seq1[s1 - 1::-1]
+                seq2_R = self.seq2[s2 - 1::-1]
                 self.seqgroup.append([seq1_R, seq2_R])
             # Forward sequences
             if(s1 + length < len(self.seq1)) and (s2 + length < len(self.seq2)):
-                seq1_F = np.append(self.seq1[s1 + length: ], [0])
-                seq2_F = np.append(self.seq2[s2 + length: ], [0])
+                # seq1_F = np.append(self.seq1[s1 + length: ], [0])
+                # seq2_F = np.append(self.seq2[s2 + length: ], [0])
+                seq1_F = self.seq1[s1 + length: ]
+                seq2_F = self.seq2[s2 + length: ]
                 self.seqgroup.append([seq1_F, seq2_F])
 
         # Final working sequence 1

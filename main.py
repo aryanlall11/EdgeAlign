@@ -29,11 +29,13 @@ dqn_agent.compile(Adam(lr = Learning_Rate), metrics = ['mae'])
 # Train RL agent
 dqn_agent.fit(env, nb_steps = Num_Episodes, visualize=False, verbose=1)
 
+model = dqn_agent.model
+model.summary()
 model.save("/content/drive/MyDrive/DDP/EdgeAlignModel")  # Save model
 
 """-------------------------------------------------------------------------"""
 
-# model = keras.models.load_model('path/to/location')
+# model = keras.models.load_model('/content/drive/MyDrive/DDP/EdgeAlignModel')
 
 # Evaluation
 scores = dqn_agent.test(env, nb_episodes=10, visualize=False)
