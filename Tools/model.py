@@ -9,7 +9,8 @@ class Model():
         pass
 
     def build_model(self, output_activation="softmax", loss="categorical_crossentropy", optimizer="adam"):
-        input_size = [n_pixels*(window+2), n_pixels*4, 3]
+        #input_size = [n_pixels*(window+2), n_pixels*4, 3]
+        input_size = [n_pixels*window, n_pixels*2, 3]
 
         model = Sequential()
         model.add(Input(shape = (1, input_size[0]*input_size[1]*input_size[2])))

@@ -21,21 +21,24 @@ class Alignment():
         sizeS1 = len(self.seq1)
         sizeS2 = len(self.seq2)
 
-        a = np.zeros([n_pixels*(window+2),n_pixels*4,4]).astype(int)
+        #a = np.zeros([n_pixels*(window+2),n_pixels*4,4]).astype(int)
+        a = np.zeros([n_pixels*window,n_pixels*2,4]).astype(int)
         if x+window > sizeS1:
             i = np.zeros([n_pixels*(sizeS1-x),n_pixels,4])
             idx_arr = np.array(self.seq1[x:sizeS1],dtype=int)
             for _ in range(n_pixels):
                 for __ in range(n_pixels):
                     i[n_pixels*np.arange(sizeS1-x)+__,_,idx_arr] = 1
-            a[n_pixels:n_pixels+n_pixels*(sizeS1-x), n_pixels:2*n_pixels, :] = i
+            #a[n_pixels:n_pixels+n_pixels*(sizeS1-x), n_pixels:2*n_pixels, :] = i
+            a[0:n_pixels*(sizeS1-x), 0:n_pixels, :] = i
         else:
             i = np.zeros([n_pixels*(window),n_pixels,4])
             idx_arr = np.array(self.seq1[x:x+window],dtype=int)
             for _ in range(n_pixels):
                 for __ in range(n_pixels):
                     i[n_pixels*np.arange(window)+__,_,idx_arr] = 1
-            a[n_pixels:-n_pixels,n_pixels:2*n_pixels,:] = i
+            #a[n_pixels:-n_pixels,n_pixels:2*n_pixels,:] = i
+            a[:, 0:n_pixels,:] = i
 
         if y+window > sizeS2:
             i = np.zeros([n_pixels*(sizeS2-y),n_pixels,4])
@@ -43,14 +46,16 @@ class Alignment():
             for _ in range(n_pixels):
                 for __ in range(n_pixels):
                     i[n_pixels*np.arange(sizeS2-y)+__,_,idx_arr] = 1
-            a[n_pixels:n_pixels+n_pixels*(sizeS2-y),2*n_pixels:3*n_pixels,:]=i
+            #a[n_pixels:n_pixels+n_pixels*(sizeS2-y),2*n_pixels:3*n_pixels,:]=i
+            a[0:n_pixels*(sizeS2-y),n_pixels: ,:]=i
         else:
             i = np.zeros([n_pixels*(window),n_pixels,4])
             idx_arr = np.array(self.seq2[y:y+window],dtype=int)
             for _ in range(n_pixels):
                 for __ in range(n_pixels):
                     i[n_pixels*np.arange(window)+__,_,idx_arr] = 1
-            a[n_pixels:-n_pixels,2*n_pixels:3*n_pixels,:] = i
+            #a[n_pixels:-n_pixels,2*n_pixels:3*n_pixels,:] = i
+            a[0: ,n_pixels: ,:] = i
 
         # Conversion to RGB
         r = (1-a[:,:,0])*(1-a[:,:,3])

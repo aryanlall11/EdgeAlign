@@ -1,5 +1,5 @@
 n_pixels = 3
-window = 80
+window = 50
 lseqs = 1500
 
 n_actions = 3
