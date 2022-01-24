@@ -9,7 +9,8 @@ align = Alignment()
 
 class EdgeAlignEnv(Env):
     def __init__(self):
-        input_size = [n_pixels*(window+2), n_pixels*4, 3]
+        #input_size = [n_pixels*(window+2), n_pixels*4, 3]
+        input_size = [n_pixels*window, n_pixels*2, 3]
         self.action_space = Discrete(n_actions)
         self.observation_space = Box(low=0, high=1, shape=(input_size[0]*input_size[1]*input_size[2], ), dtype=np.int)
         self.seq1 = []
