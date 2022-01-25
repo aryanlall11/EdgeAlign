@@ -1,4 +1,4 @@
-n_pixels = 3
+n_pixels = 1
 window = 50
 lseqs = 1500
 
@@ -16,4 +16,7 @@ zif_s = 1.6      # Zipfian distribution parameter
 BP = ['A', 'G', 'C', 'T']  # Nucleotides symbol4
 
 Learning_Rate = 1e-4
-Num_Episodes = 40000
+Num_Episodes = 60000
+
+"""----------------- EMBEDDINGS ----------------"""
+#word_index = 5*i + j + 1
