@@ -1,6 +1,6 @@
 # EdgeAlign
 
-DNA Sequence Alignment using Deep Reinforcement Learning on Edge-devices
+DNA Pairwise Sequence Alignment using Deep Reinforcement Learning on Edge-devices
 
 Author: Aryan Lall, EE, IIT Bombay
 
