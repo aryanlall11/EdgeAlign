@@ -3,6 +3,7 @@
 DNA Sequence Alignment using Deep Reinforcement Learning on Edge-devices
 
 Author: Aryan Lall, EE, IIT Bombay
+
 Guide : Prof. Siddharth Tallur, EE, IIT Bombay
 
 ----
@@ -12,12 +13,12 @@ main_benchmark.py - Obtain the mean error for a given model on the Influenza dat
 
 Autokeras.py - Perform network architecture search for EdgeAlign model using AutoKeras
 
-model-to-TFLite - Convert Keras model to TFLite format for Microcontrollers
+model-to-TFLite.py - Convert Keras model to TFLite format for Microcontrollers
 
 score.py - Obtain the BLAST alignment score for RL agent and compare it with the Influenza dataset
 
 ----
-Models_final - Folder containing model weights of trained RL agent for 5 different window sizes
+Models_final - Folder containing model weights of trained RL agents for 5 different window sizes
 
 Influenza - Folder containing Influeza dataset samples (size: 40)
 
