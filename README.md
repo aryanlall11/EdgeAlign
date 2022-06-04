@@ -3,6 +3,7 @@
 DNA Sequence Alignment using Deep Reinforcement Learning on Edge-devices
 
 Author: Aryan Lall, EE, IIT Bombay
+
 Guide : Prof. Siddharth Tallur, EE, IIT Bombay
 
 ----
