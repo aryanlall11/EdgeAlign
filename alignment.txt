@@ -1,3 +1,199 @@
-test1      --CC--- 2
-test2      AGCCCGT 7
-             **   
+test1      GGCATAAGCAGGAGATTTAGAAATGTCTAGTGTAATCAGAGAAATCGCAA 50
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AGCGATTCTTGGAACAAGCAACGATAAACATCGCTGAAGAAGTGGTCAGA 100
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      GAATATGGAGACCATGAAAGAACAATGATATCTGTTGGAGTTCATTTCCA 150
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AGCTTGCTGCCTTATAAGTGATGAATATACCCTTGAGGATGAGACAACCC 200
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      CAAGATACGTTCTTTTGGAGGGATTGAAAAGACAAGAGGCTATAAGCAAG 250
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      CAGAATAACATTTGCTCCACTTTGGGATTGGAGCCCTTGAGAAATCTAGC 300
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AGATATTTTTGATCGAAAAACAAGAAGATTCCTTGAGGTAGGAATTACAA 350
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AGAGAGAATCCGATGAGTATTACCAGGAAAAGTTCAACAAAATAGGAAAT 400
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      GACATGGACATACATGTTTTCACATATGAAGGCAAATATTTCAGCAACAA 450
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      TCCCAATGGGTTGGAAGACATCCAAAAGACAAGAATTTTTACATTCCTAT 500
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      CTTTTGTGTCAGACGAATTGAGAAAAGAGAACATGTTCACAGAAATGTAT 550
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      GTTACAGAAGAAGGGGCACCTGAACTTGAAATGTACAAGTCAAAGCTTTT 600
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      CATTGCGATGAGAGACGAGAGCGTGCCTTTGCCTTACATAAACTATGAGC 650
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      ACCTTAGGACAAGATGTGAAACATTCAAAAGAAATCAGGCTGAATGCGAA 700
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      GCAAAGGTAGCGGATGTGGCTTCACGGCTAAAAATCAAACTGGAACATCT 750
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AGAAGAAAATAAACTGCGGCCGCTAGAGATACCGAAGGAGAAAGAGGCTC 800
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      CCTATACACACAAATTTTTGATGAAAGATGCTTGGTTCTTTGCAAAACCT 850
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      CATGATTCGGAGAGAGCACAACCGCAACAGATATTGTATGATTTCTTTGA 900
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AGCAGCAAACATGGGGTTCATGACGACATCCCCAAAACCGATATTCGGAA 950
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AGCAAGGACTGATGTATCACTCCCTCTGGGGGCAGACAAAAAGAGCAATA 1000
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      AAGGACAAGAGAAATGAGTTGGAGCCTTCAGAACAGAGAGACTTCCTTTG 1050
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      TGGAATTGGAAGAGCCTCCAAGAAAATACAGGAGGACAAATGGCAAGAAT 1100
+test2      -------------------------------------------------- 0
+                                                             
+
+test1      C-C--AGAG-AGGA-AGAGTTTAAACAAG-AA-GAG-ACTAAAGG--GG- 1139
+test2      GGCATA-AGCAGAGGATATTTTTGAC--GCAATG-GCAC--AAGAACAAC 44
+             *  * ** **   * * ***  **  * ** * * **  ***      
+
+test1      --C-AGCTA-A---GAGGGGGTTCCC-AA-CATG-GTTTAATGAAGAATG 1179
+test2      TACTTGCTGAACTTGAG-GGATACCTCA-G-AGGAGTTAACCCAATGAC- 90
+             *  ***  *   *** ** * **  *   * * *** *   **  *  
+
+test1      --GCTTTGGGCAATGAGGGACTCAGG-GGATG-GGGA----CAA-TAAAA 1220
+test2      CAGGCA--AACGATTATGAAGTCTGCAAGAGGTGGGATGGAT-AGT---G 134
+             *       * ** * * * ** *   ** * ****      * *    
+
+test1      -TAGGGGA--TTGGATACCCATGGCAGAAAT-GC-CTCCCTGC-AAGAAT 1264
+test2      CTAA-GGAGGCAGCAAAAGC--AGCGAAGAAG-GGAGAAATGCAACTAAC 180
+            **  ***    * * *  *   **  * *          *** *  ** 
+
+test1      GAGATGGA-AGATTATGCA-A-AAAAG--ATGTGTGAAGA-AT-TAGAAT 1307
+test2      -AAGTGGAGAGAGCATAGTG-GTGCACATATG-CCTGAGAGCCATGT-AC 226
+            *  **** ***  **         *   ***     ***    *   * 
+
+test1      CC---A--AAAT--A----CAG-G-GAAC-AAATTGTGCTAGGGAAATG- 1342
+test2      CCTGGAATAAAGCCATGGTCAGA-AG-CCAAAAAAGATCTTGATAAA-GC 273
+           **   *  ***   *    ***   *  * ***  *  ** *  *** * 
+
+test1      T-CCAAGTTGA-TACA-TACAATTGGGAGCTTACATACAGAATGT-AGG- 1387
+test2      TA-CAGAAGGACTG-AGTGGAAA----AGACTGCAAA---AATATAAGAA 314
+           *  **    ** *  * *  **     **  * ** *   *** * **  
+
+test1      AA-CTTTCCCGGAAAGGTCA-AGATAGTGCCTAT-ATACTGCAGAGGGAC 1434
+test2      AAGCTCTG--AGGAAGGCAGGAGACC-TGACAGGGATAAAG-GAGATGAT 360
+           ** ** *    * ****    ***   ** *    ***  *      ** 
+
+test1      ACTGA-GAGGGGAATCAACT------G-ACTGTTTGTTTGGAATAGCAAT 1476
+test2      ---GATGAT-G-TATGAAATGAGGGAGGACAAAAAAGCAGAAATGGTAGA 405
+              ** **  *  ** ** *      * **         * *** * *  
+
+test1      A-AAAGGGAA-AT--CCCATTTAAA-C-AAAGATGATGGAATGTAT-A-- 1517
+test2      GCAAATCTACGATGACCCAGAGGATTTTACAGAAGATGTAAGGCTTG-GG 454
+             ***   *  **  ****    *    * *** **** ** *  *    
+
+test1      -C--TGTTGTAACTTTTGAGTTTTCCA--CTGAAGAACCAAATCCAAGC- 1561
+test2      ACCG--TTGCTGCC--TG-GC-TTCAATGC--AAAAACAAAAG--GAGCG 494
+            *    ***   *   ** *  *** *  *  ** *** ***    *** 
+
+test1      --AAACATGAAAAATATACGGTCT---TC-G-AAGCTGG-AACAG-TGCC 1602
+test2      AGAAATATCATCACAAGAT-GTCAATGTCTGGAAGCACTG--CACTTGCC 541
+             *** ** *  *  * *  ***    ** * ****      **  ****
+
+test1      T-----G-TG--G--AA-GCC---G-TGGTGTTAAC-TCCC-AAAAG-G- 1633
+test2      TTGGGAGATGCCCAAAAGGCCGGA-ATGGCCATAG-A----AAATA-T-G 583
+           *     * **     ** ***     ***   **        ** *    
+
+test1      GAAAGAGTTC-TCAAAGAGAAGAAAT-TGTTCC--T-TTATTG--C--A- 1673
+test2      GCTAGTGTTGTGCCAAT-GAAAAAAGA-GGCCCAGGC--ACTGCACAAAG 629
+           *  ** ***   * **  *** ***   *  **      * **  *  * 
+
+test1      ---GA-ACTAC-TGGAATGAGCAAGTT---A-AAGAACGATTGGTTT--- 1711
+test2      ACGCAGAAG-TTTTGATTGAACT---GGCAAGAATAGC-ATA---TGGGT 671
+               * *     * ** *** *        * ** * * **    *    
+
+test1      --TCT----AAATGCAGGAGATGTCTTATAC-CAACAATGGA-GACTGTA 1753
+test2      CAA--GAGCAATGGAAGGGCACCTGCAAAATGCAATG--GACGGAAT-TG 716
+                    **  * ***  *  *   * *  ***    *   ** * * 
+
+test1      GA-GCAGAT--AGTGCTGAAAGAAT-GCGCTC-TGAAAGAAGAAAACAGA 1798
+test2      GAAGCAAAGTCAGTGG--AATGGCTAA---TCTTGCCCTAA-AAAGGTCA 760
+           ** *** *   ****   ** *  *     ** **    ** ***    *
+
+test1      GTTTCA--GAGATGTTGGAGA-A-----TAAGAGA------G----C--- 1827
+test2      G-TTCTTACT----TTGTTAAT-GTTGGTAAT---TTGTGGGATCCCCAC 801
+           * ***         ***   *       ***          *    *   
+
+test1      TTGG-A---T--TGCCCA-------TGAGAACGGAGA-GAATCT----TA 1859
+test2      TTGTGTAAATGCTGAA-ACTGTGGA--AGAATTTTGTAGAAAG-AAACTA 847
+           ***      *  **   *         ****    *  ***       **
+
+test1      CAAGATTGGTATC--A-ACAAAGCTCAAGGACT-TGTGTAGAATGCT-AA 1904
+test2      AATCA---G-ACGGAAGA-AAAGGTTTATGTCCATTGTTTCAATGAGG-A 891
+            *  *   * *    * * **** *  * * *  *   *  ****    *
+
+test1      TTGTGAC-----ACAA---T-TTTATTACTGTATATATAA-C-GACAATC 1943
+test2      TGATGGTCGGGC--AATGA-CTTTAGCT-GCTTTG-ATACTTGGAT--GC 934
+           *  **         **     ****      * *  ***    **    *
+
+test1      AA-TTGGAAGGATTCT----GTAACGAGC--AAA-AGA-AA--------T 1976
+test2      TTTA--GTATGCTTTACATTTTAATAAAGGCA-ATAC-TGATGCTTTTGT 980
+                 * * * **       ***  *    * * *    *        *
+
+test1      TC-CT--TATGTTTCTTCAAGCAGATA---------AGGAC-TC-AAAAT 2012
+test2      TGACAATCATAAATGGAAGACCAAATGGAAGTTGGGATGACTTGAAACAT 1030
+           *  *    **   *     * ** **          * *** *  ** **
+
+test1      CTGCATTTACTTTTAATCAGAAAGGGTT--ATATGAAAA-A-ATTGAAG- 2057
+test2      GTTG-TAAAATGTTTTTCAGAGAC--TGGAAG-TGAGAAC-T--TCGCCA 1073
+            *   *  * * **  ***** *   *   *  *** **     *     
+
+test1      ---AGTGTATTGTCAGCA-ATCC-A-TTAT--G-TA---TTTTCCTAGCT 2095
+test2      GGGATATAATGGTCCT--G----GAA-TCCAGGCGAGAT---GGGGAGGA 1113
+              *    ** ***          *  *    *  *          **  
+
+test1      GATAGGCTAAACAAAT-TATTTCTTGTAGC-CAAGTCCAATGGAGCTAAG 2143
+test2      GACAAGCTCCCCAGAGGAGGGACTAGGCCCTCCA-TTGAGTGGATTCAA- 1161
+           ** * ***   ** *       ** *   * * * *  * ****   ** 
+
+test1      T--AC-TT-TGAATGACCAAAGGC-C---TTGTAATGT-T-AAAAATCTC 2183
+test2      TGAAAATGGTGTAT-T-CAT-GGAA-ACATTATAATCGCGAAAAAATCCT 1207
+           *  *  *  ** **   **  **      ** ****     *******  
+
+test1      CTTGCTACTGCT 2195
+test2      CTTGCTACTGCT 1219
+           ************

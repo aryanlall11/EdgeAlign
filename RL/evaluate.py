@@ -1,7 +1,7 @@
 import numpy as np
-from EdgeAlign.Param.params import *
-from EdgeAlign.Tools.alignment import Alignment
-from EdgeAlign.Tools.SeqGen import SeqGen
+from Param.params import *
+from Tools.alignment import Alignment
+from Tools.SeqGen import SeqGen
 
 seqgen = SeqGen()
 align = Alignment()

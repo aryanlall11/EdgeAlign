@@ -1,5 +1,5 @@
 import numpy as np
-from EdgeAlign.Param.params import *
+from Param.params import *
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Conv2D, Input, Flatten, Reshape, Dropout, MaxPool2D
 from tensorflow.keras import Input

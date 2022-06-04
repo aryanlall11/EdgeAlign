@@ -1,7 +1,7 @@
 from rl.agents import DQNAgent
 from rl.policy import GreedyQPolicy
 from rl.memory import SequentialMemory
-from EdgeAlign.Param.params import *
+from Param.params import *
 
 class EdgeAlignAgent():
     def __init__(self):

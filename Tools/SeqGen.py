@@ -1,7 +1,7 @@
 import numpy as np
 import random
 from difflib import SequenceMatcher
-from EdgeAlign.Param.params import *
+from Param.params import *
 
 class SeqGen():
     

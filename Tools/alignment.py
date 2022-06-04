@@ -1,6 +1,6 @@
 import  numpy as np
 from PIL import Image
-from EdgeAlign.Param.params import *
+from Param.params import *
 
 class Alignment():
     def __init__(self):
