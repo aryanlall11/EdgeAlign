@@ -6,6 +6,8 @@ Author: Aryan Lall, EE, IIT Bombay
 
 Guide : Prof. Siddharth Tallur, EE, IIT Bombay
 
+Refer to https://github.com/aryanlall11/EdgeAlign_Hardware.git for Hardware implementation
+
 ----
 main_train.py - Train the deep RL agent
 
